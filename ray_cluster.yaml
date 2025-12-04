@@ -1,0 +1,20 @@
+cluster_name: civic-ai-cluster
+
+provider:
+  type: local
+
+auth:
+  ssh_user: ubuntu
+
+head_node:
+  CPU: 4
+  GPU: 1
+
+worker_nodes:
+  min_workers: 2
+  max_workers: 8
+  CPU: 4
+  GPU: 1
+
+setup_commands:
+  - pip install -r requirements.txt
